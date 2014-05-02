@@ -17,3 +17,10 @@ function isInBounds(bounds, pos) {
 	return 	pos >= leftBound &&
 			pos <= rightBound;
 }
+
+function getSqrDistance(a, b) {
+	function sqr (x) {
+		return x * x;
+	}
+	return sqr(a.x - b.x) + sqr(a.y - b.y);
+}
