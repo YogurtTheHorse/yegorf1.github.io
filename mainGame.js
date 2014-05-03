@@ -28,11 +28,14 @@ var PLAYERS_COLORS = [
 			convertY(0),
 			convertY(SAVE_ZONE_SIZE)
 		]
-	],
-	POINTS = [0, 0, 0, 0],
+	];
+//Game variables
+var points = [0, 0, 0, 0],
+	texts = [null, null, null, null],
 	playersCount = 4,
 	frame = 0,
-	turn = 0;
+	turn = 0,
+	somethingMoving = false;
 
 //State
 mainGameState = function (game) { };
@@ -46,7 +49,7 @@ mainGameState.prototype = {
 
 function MainGamePreload () {
 	this.game.stage.backgroundColor = '#ddd';
-	this.game.load.image('chip', 'assets/circle.png');
+	this.game.load.image('chip', 'assets/chip.png');
 }
 
 function MainGameCreate () {
@@ -98,6 +101,30 @@ function setupFirstPlayer(state) {
 					i, PLAYER_FIRST
 				 );
 	}
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	//TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+	texts[PLAYER_FIRST] = state.game.add.text(
+												3, convertY(0.5) - 10, 
+												"0", 
+												{
+													font: "16px Arial",
+													fill: "#0"
+												}
+											 );
+	texts[PLAYER_FIRST].anchor.setTo(0.5, 0.5);
 }
 
 function setupSecondPlayer(state) {
@@ -150,11 +177,11 @@ function setupFourthPlayer(state) {
 }
 
 function setupChip(chip, number, owner) {
-	var MAX_MASS = 5;
+	var MAX_MASS = 6;
 	var mass = Math.ceil(Math.random() * (MAX_MASS - 1)) + 1;
 
-	chip.scale.setTo(convertY(CHIP_SIZE / MAX_MASS * mass) / 256);
-	chip.mass = mass;
+	chip.scale.setTo(convertY(CHIP_SIZE / MAX_MASS * mass) / 64);
+	chip.mass = mass * 100;
 	chip.anchor.setTo(0.5, 0.5);
 	chip.tint = PLAYERS_COLORS[owner];
 	chip.number = number;
@@ -241,16 +268,14 @@ function MainGameUpdate () {
 	    	chip.body.immovable = true;
 		} else {
 			chip.body.velocity.setTo(
-										chip.body.velocity.x * 0.99, 
-										chip.body.velocity.y * 0.99
+										chip.body.velocity.x * 0.9995, 
+										chip.body.velocity.y * 0.9995
 									);
 
 		}
 	});
 	frame++;
 }
-
-
 
 function MainGameRender () {
 }
