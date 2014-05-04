@@ -208,13 +208,11 @@ function nextTurn () {
 		realChipY = 1 - realChipY;
 	}
 
-	if (playersCount > 2) {
-		if (turn == )
+	if (playersCount > 3) {
 		chipX /= 2;
-	}
-	
-	if (turn > PLAYER_SECOND) {
-		chipX += 0.5;
+		if (turn > PLAYER_SECOND) {
+			chipX += 0.5;
+		}
 	}
 
 	realChipY = convertY(realChipY);
