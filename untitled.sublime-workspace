@@ -1,0 +1,689 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"two",
+				"twoPlayersButton"
+			],
+			[
+				"set",
+				"setupButton"
+			],
+			[
+				"pla",
+				"players"
+			],
+			[
+				"conve",
+				"convertY"
+			],
+			[
+				"fill",
+				"fillRect"
+			],
+			[
+				"b",
+				"bmd"
+			],
+			[
+				"conver",
+				"convertY"
+			],
+			[
+				"cone",
+				"convertY"
+			],
+			[
+				"PLAYER",
+				"PLAYER_FIRST"
+			],
+			[
+				"player",
+				"PLAYERS_COLORS"
+			],
+			[
+				"PLA",
+				"PLAYER_FOURTH"
+			],
+			[
+				"WINDOW",
+				"WINDOW_WIDTH"
+			],
+			[
+				"chip",
+				"chipY"
+			],
+			[
+				"convert",
+				"convertY"
+			],
+			[
+				"chips",
+				"chipsCount"
+			],
+			[
+				"gra",
+				"gravity"
+			],
+			[
+				"CHIP",
+				"CHIP_MATERIAl"
+			],
+			[
+				"sta",
+				"state"
+			],
+			[
+				"con",
+				"convertX"
+			],
+			[
+				"PLAYE",
+				"PLAYER_FIRST"
+			],
+			[
+				"re",
+				"rectLenght"
+			],
+			[
+				"conv",
+				"convertX"
+			],
+			[
+				"PLAYERS",
+				"PLAYER_SECOND"
+			],
+			[
+				"setup",
+				"setupFourthPlayer"
+			],
+			[
+				"mov",
+				"moves"
+			],
+			[
+				"Player",
+				"playersCount"
+			],
+			[
+				"setu",
+				"setupSecondPlayer"
+			],
+			[
+				"get",
+				"getNextSize"
+			],
+			[
+				"PLAYER_",
+				"PLAYER_FOURTH"
+			],
+			[
+				"move",
+				"moveTo"
+			],
+			[
+				"start",
+				"startPos"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"dra",
+				"dragging"
+			],
+			[
+				"Mai",
+				"MainGameRender"
+			],
+			[
+				"0x",
+				"0xFFB085"
+			],
+			[
+				"WINDO",
+				"WINDOW_HEIGHT"
+			],
+			[
+				"Preloa",
+				"preload"
+			],
+			[
+				"main",
+				"mainMenuState"
+			],
+			[
+				"prelo",
+				"preloadState"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"WIND",
+				"WINDOW_WIDTH"
+			],
+			[
+				"d",
+				"defs	Method"
+			],
+			[
+				"mem",
+				"members"
+			],
+			[
+				"r",
+				"raw_input"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"sel",
+				"setColor"
+			],
+			[
+				"circ",
+				"circle"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"cir",
+				"circle"
+			],
+			[
+				"note",
+				"noteSound"
+			],
+			[
+				"circl",
+				"circle"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"lo",
+				"love"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "mainMenu.js",
+			"settings":
+			{
+				"buffer_size": 2595,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "game.js",
+			"settings":
+			{
+				"buffer_size": 820,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 368.0,
+		"selected_items":
+		[
+			[
+				"sni",
+				"Snippet: html"
+			],
+			[
+				"inp",
+				"Package Control: Install Package"
+			],
+			[
+				"ipn",
+				"Snippet: for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"pyr",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"yr",
+				"Set Syntax: R"
+			],
+			[
+				"python",
+				"SublimeREPL: Python"
+			],
+			[
+				"yp",
+				"Set Syntax: Python"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"rpy",
+				"SublimeREPL: Python"
+			],
+			[
+				"pyrun",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"py run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"repl run",
+				"SublimeREPL: Python - RUN current file"
+			],
+			[
+				"repl",
+				"SublimeREPL: Restart REPL"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 146.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/yegorf1/Рабочий стол/gallary/gallary_01_edgeActions.js",
+		"/home/yegorf1/Рабочий стол/gallary/edge_includes/edge.3.0.0.min.js",
+		"/home/yegorf1/Рабочий стол/gallary/gallary_01_edgePreload.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainGame.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/game.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/preload.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/utils.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/index.html",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/phaser.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainMenu.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Tutorial/part9.html",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/2048.html",
+		"/home/yegorf1/Dev/Phaser/Projects/Flappy Bird/index.html",
+		"/home/yegorf1/Dev/Phaser/Projects/Flappy Bird/game.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Flappy Bird/phaser.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/untitled.sublime-project",
+		"/home/yegorf1/Dev/Phaser/resources/tutorials/01 Getting Started/hellophaser/index.html",
+		"/home/yegorf1/Dev/Phaser/resources/tutorials/01 Getting Started/hellophaser/game.js",
+		"/home/yegorf1/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/yegorf1/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/yegorf1/.config/sublime-text-2/Packages/User/HTML.sublime-settings",
+		"/home/yegorf1/.config/sublime-text-2/Packages/User/Distraction Free.sublime-settings",
+		"/home/yegorf1/Dev/Phaser/resources/tutorials/01 Getting Started/hellophaser/phaser.min.js",
+		"/home/yegorf1/Dev/Codeforces/131A.py",
+		"/home/yegorf1/My Games/2048.c",
+		"/home/yegorf1/Dev/Codeforces/213A.py",
+		"/home/yegorf1/Dev/Codeforces/50A.py",
+		"/home/yegorf1/Dev/Codeforces/158B.py",
+		"/home/yegorf1/Dev/Codeforces/118A.py",
+		"/home/yegorf1/Dev/Codeforces/71A.py",
+		"/home/yegorf1/Dev/Codeforces/*REPL* [python].py",
+		"/home/yegorf1/Dev/Codeforces/4A_test.py",
+		"/home/yegorf1/Dev/Codeforces/4A.py",
+		"/home/yegorf1/Dev/Codeforces/4A.cpp",
+		"/home/yegorf1/Dev/Codeforces/1A.py",
+		"/home/yegorf1/Dev/Codeforces/1A.cpp",
+		"/home/yegorf1/Dev/Love2d/Circles/main.lua",
+		"/home/yegorf1/Dev/Love2d/Circles/circle.lua",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/emoji.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/page.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/notifier.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/loader_nav15142_3.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/ui_controls.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/aes_light.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/tooltips.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/selects.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/profile.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/lang3_0.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/search.js",
+		"/home/yegorf1/Загрузки/Sergey Zaborovsky_files/common.js",
+		"/home/yegorf1/Dev/JS/printNumbers.js",
+		"/home/yegorf1/Dev/Love2d/Circles/Android/local.properties",
+		"/home/yegorf1/Dev/Android/android-sdk/sdk/tools/ant/build.xml",
+		"/home/yegorf1/Dev/Love2d/Circles/Android/build.xml",
+		"/home/yegorf1/.profile",
+		"/home/yegorf1/Dev/Love2d/Circles/Android/ant.properties",
+		"/home/yegorf1/Dev/Love2d/Circles/conf.lua",
+		"/home/yegorf1/PycharmProjects/gcj/B-large-practice.in",
+		"/home/yegorf1/PycharmProjects/gcj/out.txt",
+		"/home/yegorf1/PycharmProjects/gcj/B-small-practice.in",
+		"/home/yegorf1/Dev/Cpp/gcj/gcj/bin/Debug/in.txt",
+		"/home/yegorf1/Рабочий стол/record-window.sh",
+		"/home/yegorf1/Dev/Love2d/Circles/class.lua",
+		"/home/yegorf1/.config/sublime-text-2/Packages/User/Love2d.sublime-build",
+		"/home/yegorf1/Terraria/Terraria/Terraria.csproj",
+		"/home/yegorf1/Документы/Terraria-master/Terraria.csproj"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"stopDrag",
+			"drag",
+			"two",
+			"Two",
+			"twoPlayers",
+			"shape",
+			"this.game|state.game",
+			"state.chips",
+			"this.chips",
+			"chipY",
+			"move",
+			"number",
+			"static",
+			"static = true",
+			"static =",
+			"static",
+			"veloci",
+			"setTo",
+			"set",
+			"moves",
+			"CHIP_MATERIAl",
+			"ninja",
+			"arcade",
+			"var k",
+			", state.game",
+			"PLAYER_(FIRST|SECOND|THIRD|FOURTH)\\n",
+			"phys",
+			"arcade",
+			"arca",
+			"nin",
+			"if.*\\(.*.*\\)",
+			"if.*\\(.*oldPos.*\\)",
+			"if.*\\(oldPos\\)",
+			"oldPos.*null",
+			"oldPos",
+			"oldPos.*null",
+			"player",
+			"VARIANTS",
+			"res",
+			"print",
+			"0.07",
+			"collectStar",
+			"Menu",
+			"Preload",
+			"PreloadPreload",
+			"toL",
+			"toUpper",
+			"words",
+			"word",
+			"OnInteract",
+			"c"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"graph",
+			"game",
+			"chips",
+			"static",
+			"CHIP_MATERIAL"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "mainMenu.js",
+					"settings":
+					{
+						"buffer_size": 2595,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2424,
+								2424
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 829.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "game.js",
+					"settings":
+					{
+						"buffer_size": 820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 267.0
+	},
+	"output.git":
+	{
+		"height": 116.0
+	},
+	"replace":
+	{
+		"height": 106.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 220.0,
+	"status_bar_visible": false
+}

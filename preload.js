@@ -7,7 +7,8 @@ preloadState.prototype = {
 }
 
 function PreloadCreate () {
-	this.game.state.start('MainMenu');
+	this.game.stage.backgroundColor = BACKGROUND_COLOR;
+	this.game.state.start('MainGame');
 }
 
 function PreloadPreload () {
