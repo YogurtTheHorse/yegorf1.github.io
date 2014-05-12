@@ -41,7 +41,6 @@ var //States
 	mainMenuState,
 	mainGameState;
 
-
 KickItGame.state.add('Preload', preloadState);
 KickItGame.state.add('MainMenu', mainMenuState);
 KickItGame.state.add('MainGame', mainGameState);

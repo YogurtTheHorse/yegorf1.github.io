@@ -4,20 +4,104 @@
 		"selected_items":
 		[
 			[
+				"check",
+				"checkIsInside"
+			],
+			[
+				"chip",
+				"chips"
+			],
+			[
+				"PLAYER",
+				"PLAYER_THIRD"
+			],
+			[
+				"Playe",
+				"PLAYER_FIRST"
+			],
+			[
+				"player",
+				"playersCount"
+			],
+			[
+				"PLA",
+				"PLAYER_FIRST"
+			],
+			[
+				"set",
+				"setAll"
+			],
+			[
+				"ch",
+				"chip"
+			],
+			[
+				"conver",
+				"convertX"
+			],
+			[
+				"drag",
+				"dragTime"
+			],
+			[
+				"star",
+				"startXPosition"
+			],
+			[
+				"slide",
+				"slideStyle"
+			],
+			[
+				"se",
+				"setTo"
+			],
+			[
+				"tex",
+				"textFour"
+			],
+			[
+				"is",
+				"isTwo"
+			],
+			[
+				"isI",
+				"isInMenu"
+			],
+			[
+				"sta",
+				"started"
+			],
+			[
+				"play",
+				"playersCount"
+			],
+			[
+				"iw",
+				"isTwoPlayerButton"
+			],
+			[
+				"conve",
+				"convertX"
+			],
+			[
+				"con",
+				"convertX"
+			],
+			[
+				"convert",
+				"convertX"
+			],
+			[
+				"four",
+				"fourPlayersButton"
+			],
+			[
 				"two",
 				"twoPlayersButton"
 			],
 			[
-				"set",
-				"setupButton"
-			],
-			[
 				"pla",
 				"players"
-			],
-			[
-				"conve",
-				"convertY"
 			],
 			[
 				"fill",
@@ -28,36 +112,12 @@
 				"bmd"
 			],
 			[
-				"conver",
-				"convertY"
-			],
-			[
 				"cone",
 				"convertY"
 			],
 			[
-				"PLAYER",
-				"PLAYER_FIRST"
-			],
-			[
-				"player",
-				"PLAYERS_COLORS"
-			],
-			[
-				"PLA",
-				"PLAYER_FOURTH"
-			],
-			[
 				"WINDOW",
 				"WINDOW_WIDTH"
-			],
-			[
-				"chip",
-				"chipY"
-			],
-			[
-				"convert",
-				"convertY"
 			],
 			[
 				"chips",
@@ -70,14 +130,6 @@
 			[
 				"CHIP",
 				"CHIP_MATERIAl"
-			],
-			[
-				"sta",
-				"state"
-			],
-			[
-				"con",
-				"convertX"
 			],
 			[
 				"PLAYE",
@@ -220,10 +272,10 @@
 	"buffers":
 	[
 		{
-			"file": "mainMenu.js",
+			"file": "mainGame.js",
 			"settings":
 			{
-				"buffer_size": 2595,
+				"buffer_size": 10713,
 				"line_ending": "Unix"
 			}
 		},
@@ -231,7 +283,15 @@
 			"file": "game.js",
 			"settings":
 			{
-				"buffer_size": 820,
+				"buffer_size": 842,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils.js",
+			"settings":
+			{
+				"buffer_size": 1028,
 				"line_ending": "Unix"
 			}
 		}
@@ -316,16 +376,18 @@
 	},
 	"file_history":
 	[
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/game.js",
+		"/home/yegorf1/Рабочий стол/text.txt",
+		"/home/yegorf1/Галич.txt",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/index.html",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainMenu.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/preload.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/utils.js",
+		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainGame.js",
 		"/home/yegorf1/Рабочий стол/gallary/gallary_01_edgeActions.js",
 		"/home/yegorf1/Рабочий стол/gallary/edge_includes/edge.3.0.0.min.js",
 		"/home/yegorf1/Рабочий стол/gallary/gallary_01_edgePreload.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainGame.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/game.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/preload.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/utils.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/index.html",
 		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/phaser.js",
-		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/mainMenu.js",
 		"/home/yegorf1/Dev/Phaser/Projects/Tutorial/part9.html",
 		"/home/yegorf1/Dev/Phaser/Projects/Kick it!/2048.html",
 		"/home/yegorf1/Dev/Phaser/Projects/Flappy Bird/index.html",
@@ -396,9 +458,29 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"isInBou",
+			"nextT",
+			"wasNextTurn",
+			"wasNex",
+			"slide",
+			"				\n",
+			"Drag(",
+			"drag(",
+			"drag",
+			"slide",
+			"text",
+			"FONT_FAMILY",
+			"font",
+			"arial",
+			"aria",
+			"isTwoPlayerButton",
+			"textTwo",
+			";\n",
+			"twoPlayersButton",
+			"chip",
 			"stopDrag",
 			"drag",
 			"two",
@@ -454,7 +536,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"graph",
@@ -477,18 +559,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "mainMenu.js",
+					"file": "mainGame.js",
 					"settings":
 					{
-						"buffer_size": 2595,
+						"buffer_size": 10713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2424,
-								2424
+								9566,
+								9566
 							]
 						],
 						"settings":
@@ -541,7 +623,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 829.0,
+						"translation.y": 6299.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -551,15 +633,15 @@
 					"file": "game.js",
 					"settings":
 					{
-						"buffer_size": 820,
+						"buffer_size": 842,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								79,
-								79
+								661,
+								661
 							]
 						],
 						"settings":
@@ -613,6 +695,76 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "utils.js",
+					"settings":
+					{
+						"buffer_size": 1028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								983,
+								983
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

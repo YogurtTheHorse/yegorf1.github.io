@@ -8,10 +8,11 @@ var chips,
 	frame = 0,
 	turn = 0,
 	somethingMoving = false,
-	chipsCollisionGroup;
+	chipsCollisionGroup,
+	wasTurn = true;
 
 //Menu variables
-var game, field, twoPlayersButton, fourPlayersButton, isInMenu, textTwo, textFour, slideMe;
+var game, field, twoPlayersButton, fourPlayersButton, isInMenu, textTwo, textFour;
 
 //State
 mainGameState = function (game) { };
@@ -41,7 +42,7 @@ function setupChips() {
 	chips = game.add.group();
 	chips.enableBody = true;
 	chips.physicsBodyType = Phaser.Physics.P2JS;
-
+	chips.setAll('body.dumping', 10);
 	chips.setAll('static', true);
 }
 
@@ -102,15 +103,8 @@ function setupMenu() {
 					fill: BACKGROUND_COLOR,
 					align: 'center'
 				};
-	var slideStyle = {
-					font: '24px '+ FONT_FAMILY,
-					fill: "#737373",
-					align: 'center'
-				};
     textTwo =  game.add.text(convertX(0.5), convertY(0.25), "2 players game", style);
     textTwo.anchor.setTo(0.5, 0.5);
-    slideMe =  game.add.text(convertX(0.5), convertY(0.5), "Slide to start", slideStyle);
-    slideMe.anchor.setTo(0.5, 0.8);
     textFour = game.add.text(convertX(0.5), convertY(0.75), "4 players game", style)
     textFour.anchor.setTo(0.5, 0.5);
 }
@@ -119,8 +113,8 @@ function setupButton (button, isTwo) {
 	button.inputEnabled = true;
 	button.input.start(0, true);
 
-	button.events.onInputDown.add(function(btn, pnt) { drag(btn, pnt, isTwo); });
-	button.events.onInputUp.add(function(btn, pnt) { stopDrag(btn, pnt, isTwo); });
+	button.events.onInputDown.add(function(btn, pnt) { dragButton(btn, pnt, isTwo); });
+	button.events.onInputUp.add(function(btn, pnt) { stopDragButton(btn, pnt, isTwo); });
 
 	button.dragging = false;
 	button.started = false;
@@ -128,8 +122,9 @@ function setupButton (button, isTwo) {
 	button.velocity = 0;
 }
 
-function drag(button, pointer, isFourPlayerButton) {
+function dragButton(button, pointer, isFourPlayerButton) {
 	if (!button.dragging) {
+		button.dragTime = game.time.now;
 		button.startXPosition = button.x;
 		button.oldXPosition = button.x;
 		button.dragging = true;
@@ -138,11 +133,13 @@ function drag(button, pointer, isFourPlayerButton) {
 	}
 }
 
-function stopDrag(button, pointer, isFourPlayerButton) {
+function stopDragButton(button, pointer, isFourPlayerButton) {
 	if (button.dragging) {
 		button.oldXPosition = null;
 		button.dragging = false;
-		if (Math.abs(button.x) > convertX(0.3)) {
+		if (Math.abs(button.x) > convertX(0.3) || 
+		(Math.abs(button.x - button.startXPosition) < convertX(0.05) &&
+		 game.time.now - button.dragTime < 300)) {
 			button.velocity = 600 * sign(-button.x);
 			button.started = true;
 			playersCount = isFourPlayerButton ? 4 : 2;
@@ -202,16 +199,22 @@ function setupChip(chip, owner, game) {
 
 	chip.scale.setTo(convertY(CHIP_SIZE / MAX_MASS * mass) / 64);
 	chip.mass = mass * 10000;
+	chip.checked = true;
 	chip.anchor.setTo(0.5, 0.5);
 	chip.tint = PLAYERS_COLORS[owner];
 	chip.owner = owner;
+	chip.kicked = false;
+	chip.delta = { x: 0, y: 0 };
 	chip.dragging = false;
 	chip.body.collides(chipsCollisionGroup);
 	chip.body.setCircle(chip.width / 2);
+	chip.body.dumping = 0;
 	chip.inputEnabled = true;
 	chip.input.start(0, true);
 	chip.events.onInputDown.add(dragChip);
 	chip.events.onInputUp.add(stopDragChip);
+
+	wasTurn = false;
 
 	return true;
 }
@@ -223,7 +226,6 @@ function dragChip(chip, pointer) {
 	if (isInBounds(BOUNDS[chip.owner], chip.y) && !chip.dragging){
 		chip.dragging = true;
 		chip.pointer = pointer;
-		chip.oldPos = { x: chip.x, y: chip.y };
 		chip.startPos = chip.oldPos;
 	}
 }
@@ -235,8 +237,7 @@ function stopDragChip (chip, pointer) {
 				chip.moveTo = chip.startPos;
 			}
 			chip.dragging = false;
-			chip.pointer = null
-			chip.oldPos = null;
+			chip.pointer = null;
 		} else {
 			var Xvector = (chip.x - chip.oldPos.x) * 10,
 				Yvector = (chip.y - chip.oldPos.y) * 10;
@@ -248,9 +249,8 @@ function stopDragChip (chip, pointer) {
 			chip.pointer = null
 			chip.oldPos = null;
 
-			if (!nextTurn()) {
-				alert('game over');
-			}
+			wasTurn = true;
+			chip.kicked = true;
 		}
 	}
 }
@@ -306,8 +306,11 @@ function MainGameUpdate () {
 		updateButton(twoPlayersButton, true);
 		updateButton(fourPlayersButton, false);
 	} else {
+		var isAllSleeping = true;
 		chips.forEach(function (chip) {
 			if (chip.moveTo) {
+				isAllSleeping = false;
+					chip.checked = false;
 				var k = 0.2,
 					dist = getSqrDistance(chip.moveTo, chip);
 				if (dist < 3) {
@@ -323,6 +326,8 @@ function MainGameUpdate () {
 					chip.body.velocity.y = (chip.moveTo.y - chip.y) / k;
 				}
 			} else if (chip.dragging && chip.pointer) {
+				isAllSleeping = false;
+				chip.checked = false;
 				if (isInBounds(BOUNDS[chip.owner], chip.y)) {
 					if (frame % 5 == 0) {
 						chip.oldPos = { x: chip.x, y: chip.y };
@@ -333,20 +338,62 @@ function MainGameUpdate () {
 					stopDragChip(chip, chip.pointer);
 				}
 			} else {
-				//chip.body.velocity.x = chip.body.velocity.x * 1;
-				//chip.body.velocity.y++;
+				var k = 0.9999;
+				if (Math.abs(chip.body.data.velocity[0]) < 2 || Math.abs(chip.body.data.velocity[1]) < 2) {
+					k = 0.99;
+				}
+				if (Math.abs(chip.body.data.velocity[0]) < 0.2 && Math.abs(chip.body.data.velocity[1]) < 0.2) {
+					chip.body.data.velocity[0] = 0;
+					chip.body.data.velocity[1] = 0;
+					if (!chip.checked) {/*
+						if (checkIsInside(chip))
+							isAllSleeping = false;
+						*/
+					}
+				} else {
+					chip.body.data.velocity[0] *= k;
+					chip.body.data.velocity[1] *= k;
+					chip.checked = false;
+					isAllSleeping = false;
+				}
 			}
+			chip.oldPos = { x: chip.x, y: chip.y };
 		});
+		if (wasTurn && isAllSleeping) {
+			if (!nextTurn()) {
+				alert('game over');
+			}
+		}
 		frame++;
 	}
+}
+
+function checkIsInside(chip) {
+	return true;
+	if (!chip.kicked)
+		return false;
+	if (isInBounds(BOUNDS[PLAYER_FIRST], chip.y)) {
+		if (chip.scale > 1) {
+			chip.scale.setTo(chip.scale - 1);
+		} else {
+			if (playersCount > 2 && chipsCount[PLAYER_FIRST] > chipsCount[PLAYER_THIRD]) {
+				chipsCount[PLAYER_THIRD]++;
+			} else {
+				chipsCount[PLAYER_FIRST]++;
+			}
+		}
+		return true;
+	}
+
+	chip.checked = true;
+
+	return false;
 }
 
 function updateButton (button, isFourPlayerButton) {
 	if (button.dragging) {
 		button.velocity = button.x - (button.pointer.worldX + button.offset);
-		slideMe.alpha = 1 - Math.min(1, Math.abs(-button.x) / convertX(0.3));
 	} else if (button.moveTo) {
-		slideMe.alpha = 1 - Math.min(1, Math.abs(-button.x) / convertX(0.3));
 		var dist = Math.abs(button.x - button.moveTo);
 		if (dist < 6) {
 			button.moveTo = 0;
@@ -362,14 +409,11 @@ function updateButton (button, isFourPlayerButton) {
 		button.velocity = 0;
 	}
 	if (button.started) {
-		if (!twoPlayersButton.started) {
-			twoPlayersButton.started = true;
-			twoPlayersButton.velocity = -button.velocity;
-		}
-		if (!fourPlayersButton.started) {
-			fourPlayersButton.started = true;
-			fourPlayersButton.velocity = -button.velocity;
-		}
+		twoPlayersButton.started = true;
+		twoPlayersButton.velocity = 600 * sign(button.x);
+		fourPlayersButton.started = true;
+		fourPlayersButton.velocity = 600 * sign(button.x);
+
 		if (Math.abs(twoPlayersButton.x) > convertX(1) && Math.abs(fourPlayersButton.x) > convertX(1)) {
 			isInMenu = false;
 			textTwo.destroy();
@@ -379,4 +423,5 @@ function updateButton (button, isFourPlayerButton) {
 }
 
 function MainGameRender () {
+
 }
