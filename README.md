@@ -1,4 +1,4 @@
 yegorf1.github.io
 =================
 
-Ny own website :3
+My own website :3
